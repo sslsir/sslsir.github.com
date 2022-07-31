@@ -1,4 +1,4 @@
-宝塔面板国际版安装
+aaPanel 宝塔面板国际版
 
 ![宝塔面板国际版](https://sslsir.github.io/assets/images/aapanel.png)
 
