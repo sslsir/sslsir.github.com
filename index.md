@@ -38,5 +38,6 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 ### Link
 
-layuiAdmin-doc：(/layuiAdmin-doc/)
+layuiAdmin-doc：(https://sslsir.github.io/layuiAdmin-doc/)
+
 
