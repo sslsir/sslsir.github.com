@@ -24,7 +24,7 @@ wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh && bas
 
 ## aaPanel 管理脚本
 
-**面板管理**
+###面板管理###
 
 Stop：
 ```markdown
@@ -41,6 +41,35 @@ Restart：
 service bt restart
 ```
 
+Uninstall
+```markdown
+service bt stop && chkconfig --del bt && rm -f /etc/init.d/bt && rm -rf /www/server/panel
+```
+
+View current port of control panel
+```markdown
+cat /www/server/panel/data/port.pl
+```
+
+Change port of control panel，e.g. 8881（centos 6 Operation System）
+```markdown
+echo '8881' > /www/server/panel/data/port.pl && service bt restart iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport 8881 -j ACCEPT service iptables save service iptables restart
+```
+
+Change port of control panel，e.g. 8881（centos 7 Operation System）
+```markdown
+echo '8881' > /www/server/panel/data/port.pl && service bt restart firewall-cmd --permanent --zone=public --add-port=8881/tcp firewall-cmd --reload
+```
+
+Force to change MySQL manager (root) Password，e.g. 123456
+```markdown
+cd /www/server/panel && python tools.py root 123456
+```
+
+Change control Panel login password，e.g. 123456
+```markdown
+cd /www/server/panel && python tools.py panel 123456
+```
 
 Site Configuration location
 ```markdown
@@ -104,16 +133,16 @@ Site logs
 ```
 
 
-**Nginx**
+###Nginx###
 
 nginx installation directory
 ```markdown
 /www/server/nginx
-```=
+```
 Start
 ```markdown
 service nginx start
-```=
+```
 Stop
 ```markdown
 service nginx stop
@@ -132,7 +161,7 @@ nginx Configuration
 ```
 
 
-**Apache**
+###Apache###
 
 apache installation directory
 ```markdown
@@ -160,7 +189,7 @@ apache Configuration
 ```
 
 
-**MySQL**
+###MySQL###
 
 mysql installation directory
 ```markdown
@@ -196,7 +225,7 @@ mysql Configuration
 ```
 
 
-**FTP**
+###FTP###
 
 ftp installation directory
 ```markdown
@@ -220,7 +249,7 @@ ftp Configuration
 ```
 
 
-**PHP**
+###PHP###
 
 php installation directory
 ```markdown
@@ -248,7 +277,7 @@ Configuration(Please modify by PHP version, e.g. /www/server/php/52/etc/php.ini)
 ```
 
 
-**Redis**
+###Redis###
 
 redis installation directory
 ```markdown
@@ -267,7 +296,7 @@ redis Configuration
 /www/server/redis/redis.conf
 ```
 
-**Memcached**
+###Memcached###
 
 memcached installation directory
 ```markdown
