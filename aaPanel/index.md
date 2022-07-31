@@ -24,7 +24,7 @@ wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh && bas
 
 ## aaPanel 管理脚本
 
-###面板管理###
+### 面板管理
 
 Stop：
 ```markdown
@@ -133,7 +133,7 @@ Site logs
 ```
 
 
-###Nginx###
+### Nginx
 
 nginx installation directory
 ```markdown
@@ -161,7 +161,7 @@ nginx Configuration
 ```
 
 
-###Apache###
+### Apache
 
 apache installation directory
 ```markdown
@@ -189,7 +189,7 @@ apache Configuration
 ```
 
 
-###MySQL###
+### MySQL
 
 mysql installation directory
 ```markdown
@@ -225,7 +225,7 @@ mysql Configuration
 ```
 
 
-###FTP###
+### FTP
 
 ftp installation directory
 ```markdown
@@ -249,7 +249,7 @@ ftp Configuration
 ```
 
 
-###PHP###
+### PHP
 
 php installation directory
 ```markdown
@@ -277,7 +277,7 @@ Configuration(Please modify by PHP version, e.g. /www/server/php/52/etc/php.ini)
 ```
 
 
-###Redis###
+### Redis
 
 redis installation directory
 ```markdown
@@ -296,7 +296,7 @@ redis Configuration
 /www/server/redis/redis.conf
 ```
 
-###Memcached###
+### Memcached
 
 memcached installation directory
 ```markdown
