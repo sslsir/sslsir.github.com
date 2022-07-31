@@ -1,5 +1,7 @@
 宝塔面板国际版安装
 
+[宝塔面板国际版](https://sslsir.github.io/assets/images/aapanel.png)
+
 ## aaPanel 安装脚本
 
 Centos：
