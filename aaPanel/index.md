@@ -42,4 +42,252 @@ service bt restart
 ```
 
 
+Site Configuration location
+```markdown
+/www/server/panel/vhost
+```
+Delete banding domain of control panel
+```markdown
+rm -f /www/server/panel/data/domain.conf
+```
+Clean login restriction
+```markdown
+rm -f /www/server/panel/data/*.login
+```
+View control panel authorization IP
+```markdown
+cat /www/server/panel/data/limitip.conf
+```
+Stop access restriction
+```markdown
+rm -f /www/server/panel/data/limitip.conf
+```
+View permission domain
+```markdown
+cat /www/server/panel/data/domain.conf
+```
+Turn off control panel SSL
+```markdown
+rm -f /www/server/panel/data/ssl.pl && /etc/init.d/bt restart
+```
+View control panel error logs
+```markdown
+cat /tmp/panelBoot
+```
+View database error log
+```markdown
+cat /www/server/data/*.err
+```
+Site Configuration directory(nginx)
+```markdown
+/www/server/panel/vhost/nginx
+```
+Site Configuration directory(apache)
+```markdown
+/www/server/panel/vhost/apache
+```
+Site default directory
+```markdown
+/www/wwwroot
+```
+Database backup directory
+```markdown
+/www/backup/database
+```
+Site backup directory
+```markdown
+/www/backup/site
+```
+Site logs
+```markdown
+/www/wwwlogs
+```
+
+
+**Nginx**
+
+nginx installation directory
+```markdown
+/www/server/nginx
+```=
+Start
+```markdown
+service nginx start
+```=
+Stop
+```markdown
+service nginx stop
+```
+Restart
+```markdown
+service nginx restart
+```
+Reload
+```markdown
+service nginx reload
+```
+nginx Configuration
+```markdown
+/www/server/nginx/conf/nginx.conf
+```
+
+
+**Apache**
+
+apache installation directory
+```markdown
+/www/server/httpd
+```
+Start
+```markdown
+service httpd start
+```
+Stop
+```markdown
+service httpd stop
+```
+Restart
+```markdown
+service httpd restart
+```
+Reload
+```markdown
+service httpd reload
+```
+apache Configuration
+```markdown
+/www/server/apache/conf/httpd.conf
+```
+
+
+**MySQL**
+
+mysql installation directory
+```markdown
+/www/server/mysql
+```
+phpmyadmin installation directory
+```markdown
+/www/server/phpmyadmin
+```
+Data storage directory
+```markdown
+/www/server/data mysql
+```
+Start
+```markdown
+service mysqld start
+```
+Stop
+```markdown
+service mysqld stop
+```
+Restart
+```markdown
+service mysqld restart
+```
+Reload
+```markdown
+service mysqld reload
+```
+mysql Configuration
+```markdown
+/etc/my.cnf
+```
+
+
+**FTP**
+
+ftp installation directory
+```markdown
+/www/server/pure-ftpd
+```
+Start
+```markdown
+service pure-ftpd start
+```
+Stop
+```markdown
+service pure-ftpd stop
+```
+Restart
+```markdown
+service pure-ftpd restart
+```
+ftp Configuration
+```markdown
+/www/server/pure-ftpd/etc/pure-ftpd
+```
+
+
+**PHP**
+
+php installation directory
+```markdown
+/www/server/php
+```
+Start(Please modify by PHP version, e.g. service php-fpm-54 start)
+```markdown
+servicephp-fpm-{52|53|54|55|56|70|71|72|73|74|80|81} start
+```
+Stop(Please modify by PHP version, e.g. service php-fpm-54 stop)
+```markdown
+service php-fpm-{52|53|54|55|56|70|71|72|73|74|80|81} stop
+```
+Restart(Please modify by PHP version, e.g. service php-fpm-54 restart)
+```markdown
+service php-fpm-{52|53|54|55|56|70|71|72|73|74|80|81} restart
+```
+Reload(Please modify by PHP version, e.g. service php-fpm-54 reload)
+```markdown
+service php-fpm-{52|53|54|55|56|70|71|72|73|74|80|81} reload
+```
+Configuration(Please modify by PHP version, e.g. /www/server/php/52/etc/php.ini)
+```markdown
+/www/server/php/{52|53|54|55|56|70|71|72|73|74|80|81}/etc/php.ini
+```
+
+
+**Redis**
+
+redis installation directory
+```markdown
+/www/server/redis
+```
+Start
+```markdown
+service redis start
+```
+Stop
+```markdown
+service redis stop
+```
+redis Configuration
+```markdown
+/www/server/redis/redis.conf
+```
+
+**Memcached**
+
+memcached installation directory
+```markdown
+/usr/local/memcached
+```
+Start
+```markdown
+service memcached start
+```
+Stop
+```markdown
+service memcached stop
+```
+Restart
+```markdown
+service memcached restart
+```
+Reload
+```markdown
+service memcached reload
+```
+
 [Install aaPanel for free](https://sslsir.github.io/aaPanel/install.mhtml)
